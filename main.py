@@ -15,7 +15,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/foo', methods=['POST'])
+@app.route('/foo', methods=['GET', 'POST'])
 def foo():
     lyrics = textgen.generate(n=20, return_as_list=True)
     return "\n".join(lyrics)
