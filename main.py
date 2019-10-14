@@ -23,4 +23,4 @@ def foo():
 
 if __name__ == "__main__":
     load_model()
-    app.run(port=8080, debug=True, threaded=False)
+    app.run()
