@@ -1,0 +1,31 @@
+<!-- index.html -->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<h2>Lyrics Generator</h2>
+<body>
+<button id='myButton' type="button">generate</button>
+<div id="textlist" style="list-style: none;"></div>
+<script>
+    $('#myButton').click(function() {
+        $.ajax({
+            type:'POST',
+            url: "{{ url_for('foo')}}",
+            dataType:"html",
+            success: function(response){
+
+                console.log(response)
+                var data = response.split("\n");
+                console.log(data)
+
+                var list_html = "<ul style='list-style: none;'>";
+                for( var i=0; i <data.length; i++) {
+                   list_html += "<li>" + data[i] + "</li>";
+                }
+                list_html += "</ul>"
+                $("#textlist").html(list_html);
+            }
+    });
+    });
+</script>
+</body>
