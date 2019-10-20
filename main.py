@@ -1,6 +1,6 @@
 from flask import Flask
 import os
-from flask import url_for, render_template, send_from_directory
+from flask import render_template, send_from_directory
 from textgenrnn import textgenrnn
 
 app = Flask(__name__)
@@ -13,8 +13,8 @@ def favicon():
 def index():
     return render_template('index.html')
 
-@app.route('/foo', methods=['POST'])
-def foo():
+@app.route('/generate', methods=['POST'])
+def generate():
     textgen = textgenrnn("textgenrnn_weights_4epochs.hdf5")
     lyrics = textgen.generate(n=20, return_as_list=True)
     return "\n".join(lyrics)
