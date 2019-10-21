@@ -4,7 +4,13 @@ Live at:
 
 [damp-harbor-56160.herokuapp.com](https://damp-harbor-56160.herokuapp.com/)
 
-Run locally:
+Docker:
+
+    docker run -p 5000:5000 hd4niel/lyricsgen
+    runnig at: http://0.0.0.0:5000/
+link: https://cloud.docker.com/u/hd4niel/repository/docker/hd4niel/lyricsgen
+
+Else, clone and run locally:
 
     python main.py
 
