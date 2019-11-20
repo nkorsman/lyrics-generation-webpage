@@ -2,7 +2,7 @@
 
 Live at:
 
-[damp-harbor-56160.herokuapp.com](https://damp-harbor-56160.herokuapp.com/)
+[lyrics-gen.herokuapp.com](https://lyrics-gen.herokuapp.com/)
 
 Docker:
 
